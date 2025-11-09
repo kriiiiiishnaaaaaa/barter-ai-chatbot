@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barter - AI Negotiation Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>🛍️ Barter Shop</h1>
+            <p class="tagline">Smart Shopping with AI-Powered Negotiation</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="intro-section">
+            <h2>Welcome to Barter! 🤖</h2>
+            <p>Browse our products and either purchase directly or negotiate with our AI assistant for the best deal!</p>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be loaded here dynamically -->
+        </div>
+    </main>
+
+    <!-- Chat Modal -->
+    <div id="chatModal" class="modal">
+        <div class="modal-content">
+            <div class="chat-header">
+                <h3>💬 Chat with Barter 🤖 – Your AI Negotiation Assistant</h3>
+                <span class="close-btn" onclick="closeChat()">&times;</span>
+            </div>
+            
+            <div class="product-info" id="chatProductInfo">
+                <!-- Selected product info will appear here -->
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <!-- Chat messages will appear here -->
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="userInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()" class="send-btn">Send</button>
+            </div>
+
+            <div class="negotiation-summary" id="negotiationSummary" style="display: none;">
+                <!-- Summary will appear here after deal -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Purchase Confirmation Modal -->
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content purchase-confirmation">
+            <span class="close-btn" onclick="closePurchaseModal()">&times;</span>
+            <div class="success-animation">✅</div>
+            <h2>Purchase Successful! 🎉</h2>
+            <div id="purchaseDetails"></div>
+            <p class="thank-you">Thanks for your purchase! Barter is happy to serve you 😊</p>
+            <button onclick="closePurchaseModal()" class="purchase-btn">Continue Shopping</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Barter - AI Negotiation Chatbot | Minor Project in AI & ML</p>
+            <p class="college-info">Developed for College Minor Project</p>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
